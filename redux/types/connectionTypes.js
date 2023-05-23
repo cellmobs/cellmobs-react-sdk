@@ -1,0 +1,15 @@
+/**
+ * Reducer types
+ */
+
+export const SET_CONNECTION  = "SET_CONNECTION";
+export const SET_CONNECTIONS  = "SET_CONNECTIONS";
+export const SET_PAGINATION  = "SET_PAGINATION";
+export const ADD_CONNECTION  = "ADD_CONNECTION";
+export const REMOVE_CONNECTION  = "REMOVE_CONNECTION";
+export const CLEAR_CONNECTION  = "CLEAR_CONNECTION";
+export const CLEAR_CONNECTIONS  = "CLEAR_CONNECTIONS";
+export const CLEAR_PAGINATION  = "CLEAR_PAGINATION";
+
+export const SET_FETCHING  = "SET_FETCHING";
+export const SET_ERROR  = "SET_ERROR";

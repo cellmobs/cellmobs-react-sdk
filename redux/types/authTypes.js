@@ -1,0 +1,36 @@
+/**
+ * Reducer types
+ */
+export const LOGIN  = "LOGIN";
+export const LOGIN_REQUEST = "LOGIN_REQUEST";
+export const LOGIN_RESPONSE  = "LOGIN_RESPONSE";
+export const LOGIN_ERROR = "LOGIN_ERROR";
+export const LOGOUT = "LOGOUT";
+export const CONNECTIONS_RESPONSE  = "CONNECTIONS_RESPONSE";
+export const PASSWORD_ERROR = "PASSWORD_ERROR";
+export const PASSWORD_RESPONSE = "PASSWORD_RESPONSE";
+
+export const SET_TOKEN  = "SET_TOKEN";
+export const SET_USER  = "SET_USER";
+export const SET_CONNECTIONS  = "SET_CONNECTIONS";
+export const SET_FETCHING  = "SET_FETCHING";
+
+export const FETCHING_RESULTS  = "FETCHING_RESULTS";
+export const FETCHING_TYPES  = "FETCHING_TYPES";
+export const FETCHING_THREAD  = "FETCHING_THREAD";
+export const CLEAR_PARAMS = "CLEAR_PARAMS";
+
+export const SEARCH_RESPONSE = "SEARCH_RESPONSE";
+export const SEARCH_ERROR = "SEARCH_ERROR";
+export const BROWSE_RESPONSE = "BROWSE_RESPONSE";
+export const BROWSE_ERROR = "BROWSE_ERROR";
+export const CLEAR_BROWSE = "CLEAR_BROWSE";
+export const CLEAR_RESULTS = "CLEAR_RESULTS";
+export const DELETE_RESPONSE = "DELETE_RESPONSE";
+export const DELETE_ERROR = "DELETE_ERROR";
+export const VIEW_RESPONSE = "VIEW_RESPONSE";
+export const VIEW_ERROR = "VIEW_ERROR";
+
+export const THREAD_RESPONSE = "THREAD_RESPONSE";
+export const THREAD_ERROR = "THREAD_ERROR";
+export const CLEAR_THREAD = "CLEAR_THREAD";

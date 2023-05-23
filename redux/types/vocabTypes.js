@@ -1,0 +1,24 @@
+/**
+ * Reducer types
+ */
+
+export const SET_VOCABULARY  = "SET_VOCABULARY";
+export const SET_VOCABULARIES  = "SET_VOCABULARIES";
+export const SET_PAGINATION  = "SET_PAGINATION";
+export const ADD_VOCABULARY  = "ADD_VOCABULARY";
+export const REMOVE_VOCABULARY  = "REMOVE_VOCABULARY";
+export const CLEAR_VOCABULARY  = "CLEAR_VOCABULARY";
+export const CLEAR_VOCABULARIES  = "CLEAR_VOCABULARIES";
+export const CLEAR_PAGINATION  = "CLEAR_PAGINATION";
+
+export const SET_VALUE  = "SET_VALUE";
+export const SET_VALUES  = "SET_VALUES";
+export const SET_VALUE_PAGINATION  = "SET_VALUE_PAGINATION";
+export const ADD_VALUE  = "ADD_VALUE";
+export const REMOVE_VALUE  = "REMOVE_VALUE";
+export const CLEAR_VALUE  = "CLEAR_VALUE";
+export const CLEAR_VALUES  = "CLEAR_VALUES";
+export const CLEAR_VALUE_PAGINATION  = "CLEAR_VALUE_PAGINATION";
+
+export const SET_FETCHING  = "SET_FETCHING";
+export const SET_ERROR  = "SET_ERROR";

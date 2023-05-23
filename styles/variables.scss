@@ -1,0 +1,86 @@
+// spacing
+$spaces: (
+  "xs": 4px,
+  "s": 8px,
+  "m": 16px,
+  "l": 24px,
+  "xl": 32px,
+  "xxl": 48px,
+);
+@function spacing($space) {
+  @return map-get($spaces, $space)
+};
+
+// fonts
+$fonts: (
+  "h1": normal normal bold 42px/60px "Raleway",
+  "h2": normal normal 600 28px/48px "Raleway",
+  "h3": normal normal 600 24px/48px "Raleway",
+  "header": normal normal 600 36px/54px "Raleway",
+  "title": normal normal 600 22px/34px "Raleway",
+  "subtitle": normal normal 600 14px/28px "Open Sans",
+  "body1": normal normal 400 18px/150% "Raleway",
+  "body2": normal normal 400 14px/31px "Raleway",
+  "body3": normal normal normal 12px/150% "Raleway",
+);
+@function font($font) {
+  @return map-get($fonts, $font)
+};
+
+// colors
+$colors: (
+  "primary": var(--primary),
+  "secondary": var(--secondary),
+  "error": var(--error),
+  "warning": var(--warning),
+  "orange": var(--orange),
+  "white": var(--white),
+  "black": var(--black)
+);
+@function color($color) {
+  @return map-get($colors, $color)
+};
+
+// breakpoints
+// !!! must be the same with /hooks/useBreakpoints.js breakpoints
+$breakpoints: (
+  "zero": 0,
+  "xs": 375px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+@mixin breakpoint($breakpoint) {
+  $bp: nth($breakpoint, 1);
+  $max: 0;
+  $dir: nth($breakpoint, 2);
+  $query: "only screen";
+
+  @if map-has-key($breakpoints, $bp) {
+    $min: map-get($breakpoints, $bp);
+    $nextIndex: index($breakpoints, $bp $min) + 1;
+    $next: if($nextIndex > length($breakpoints), null, nth($breakpoints, $nextIndex));
+
+    @if $dir == "only" {
+      $query: $query + " and (min-width: #{$min})";
+
+      @if $next == null {
+        $max: null;
+      } @else {
+        $max: nth($next, 2) - calc(1 / 16);
+        $query: $query + " and (max-width: #{$max})";
+      }
+    } @else if $dir == "up" {
+      $query: $query + " and (min-width: #{$min})";
+    } @else if $dir == "down" {
+      $max: nth($next, 2) - calc(1 / 16);
+      $query: $query + " and (max-width: #{$max})";
+    }
+
+    @media #{$query} {
+      @content;
+    }
+  }
+}
