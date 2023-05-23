@@ -1,0 +1,24 @@
+/**
+ * Reducer types
+ */
+
+export const SET_POLL  = "SET_POLL";
+export const SET_POLLS  = "SET_POLLS";
+export const SET_PAGINATION  = "SET_PAGINATION";
+export const ADD_POLL  = "ADD_POLL";
+export const REMOVE_POLL  = "REMOVE_POLL";
+export const CLEAR_POLL  = "CLEAR_POLL";
+export const CLEAR_POLLS  = "CLEAR_POLLS";
+export const CLEAR_PAGINATION  = "CLEAR_PAGINATION";
+
+export const SET_POLL_RESPONSE  = "SET_POLL_RESPONSE";
+export const SET_POLL_RESPONSES  = "SET_POLL_RESPONSES";
+export const SET_RESPONSE_PAGINATION  = "SET_RESPONSE_PAGINATION";
+export const ADD_POLL_RESPONSE  = "ADD_POLL_RESPONSE";
+export const REMOVE_POLL_RESPONSE  = "REMOVE_POLL_RESPONSE";
+export const CLEAR_POLL_RESPONSE  = "CLEAR_POLL_RESPONSE";
+export const CLEAR_POLL_RESPONSES  = "CLEAR_POLL_RESPONSES";
+export const CLEAR_RESPONSE_PAGINATION  = "CLEAR_RESPONSE_PAGINATION";
+
+export const SET_FETCHING  = "SET_FETCHING";
+export const SET_ERROR  = "SET_ERROR";

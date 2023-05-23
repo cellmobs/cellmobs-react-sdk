@@ -1,0 +1,120 @@
+/* 
+/* 
+/*  custom.css
+/*
+/*  If not using Gulp and Sass, add your custom CSS below then include it
+/*  in your page by adding a reference to assets/css/custom.css in the head of each page.
+/*
+*/
+body{
+	font-weight:400;
+	color: rgba(0,0,0,0.9);
+}
+.ck.ck-editor__editable_inline>:first-child{
+	margin-top: 0px !important;
+}
+.ck.ck-editor__editable_inline>:last-child{
+	margin-bottom: 0px !important;
+}
+.ck.ck-editor__editable_inline{
+	padding:0 !important;
+}
+.shadow-dark{
+	text-shadow: 2px 2px #5d5d5d;
+}
+.text-tiny {
+    font-size: 0.7em;
+}
+
+.text-small {
+    font-size: 0.85em;
+}
+.text-big {
+    font-size: 1.4em;
+}
+.text-huge {
+    font-size: 1.8em;
+}
+
+.admin-tools{
+	padding:6px;
+	border-radius:0 4px 0 0;
+	background:#000;
+	color:#fff;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	z-index:100;	
+}
+.admin-tools a{
+	color:#fff;
+	padding:4px;
+}
+.admin-tools a:hover{
+	color:#000;
+	background: #fff;
+}
+
+ck-content blockquote{
+	border-left:none !important;
+}
+figure.image img{
+    width:100%;
+}
+.image-style-align-left,.image-style-align-right{
+    max-width:50%;
+}
+.image-style-align-right{
+    max-width:50%;
+    float:right;
+}
+.image-style-align-left{
+    max-width:50%;
+}
+.image>figcaption{
+	background:none !important;
+}
+.dropdown-toggle:after{
+	 background-image: none;
+}
+
+blockquote, .ck-content blockquote{
+	color:	#9c0d14;
+	border-left: 2px solid #EAEDF2  !important;
+	font-size: 1.25rem !important; 
+	padding-left: 1rem;
+}
+.article .media{
+	display: block
+}
+
+@media (min-width: 992px){
+	section#help-header, section#article-header{
+	    padding: 3.5rem 0 1rem;
+	}
+}
+article h1, article h2, article h3, article h4{
+	margin-top:2.6rem;
+}
+
+form label.error{
+	font-size:80%;
+	color:red;
+	padding:2px 4px;
+}
+form input.error{
+	border-color:red;
+}
+i.fad.primary{
+	color:#EB5063;
+}
+#help-list .icon{
+	width:54px;
+	text-align:center;
+}
+.btn-back-to-top{
+	display:none;
+}
+.bg-menu-lite{
+	background: #ffffff;
+}
