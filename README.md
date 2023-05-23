@@ -39,7 +39,7 @@ export const TINY_MCE_KEY = process.env.TINY_MCE_KEY || "TINY-MCE-KEY"  // Your 
 ```
 ## Testing
 
-After you cloned this repo, please follow the [Cellmobs Quickstart Guide](https://docs.cellmobs.com/setup/quickstart){:target_"_blank"} to create your first Cellmobs app and generate an API key. 
+After you cloned this repo, please follow the [Cellmobs Quickstart Guide](https://docs.cellmobs.com/setup/quickstart) to create your first Cellmobs app and generate an API key. 
 
 ## Learn More
 
