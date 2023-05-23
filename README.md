@@ -39,13 +39,15 @@ export const TINY_MCE_KEY = process.env.TINY_MCE_KEY || "TINY-MCE-KEY"  // Your 
 ```
 ## Testing
 
+After you cloned this repo, please follow the [Cellmobs Quickstart Guide](https://docs.cellmobs.com/setup/quickstart){:target_"_blank"} to create your first Cellmobs app and generate an API key. 
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
+- [Cellmobs Docs](https://docs.cellmobs.com) - Cellmobs Developer Documentation.
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Cellmobs Docs](https://docs.cellmobs.com) - an Cellmobs Developer Documentation.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
