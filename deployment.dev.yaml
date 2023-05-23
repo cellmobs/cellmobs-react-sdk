@@ -23,7 +23,7 @@ spec:
       spec:
          serviceAccountName: cellmobs-service-account
          containers:
-         -  image: {account_id}.dkr.ecr.us-east-1.amazonaws.com/cellmobs-react:dev_latest
+         -  image: accountid.dkr.ecr.us-east-1.amazonaws.com/cellmobs-react:dev_latest
             name: cellmobs-react
             imagePullPolicy: Always
             livenessProbe:
