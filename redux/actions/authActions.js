@@ -21,6 +21,25 @@ export const login = (params) => {
     }
 }
 
+export const loginSSO = (params) => {
+    return dispatch => {
+        dispatch({type: SET_FETCHING, payload: true})
+        api.auth.loginSSO(params)
+        .then(response => {
+            if (isError(response)) {
+                dispatch({type: LOGIN_ERROR, payload: response});
+            }
+            else {
+                dispatch({type: LOGIN_RESPONSE, payload: response});
+            }
+            dispatch({type: SET_FETCHING, payload: false})
+        }).catch(error => {
+            dispatch({type: LOGIN_ERROR, payload: error});
+            dispatch({type: SET_FETCHING, payload: false})
+        });
+    }
+}
+
 export const passwordResetRequest = (params) => {
     return dispatch => {
         dispatch({type: SET_FETCHING, payload: true})

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 //import { login } from '../redux/actions/authActions';
-import { login } from 'js/cellmobs/api/auth';
+import { login, loginSSO } from 'js/cellmobs/api/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { LOGIN_ERROR, LOGIN_RESPONSE, LOGOUT } from '../redux/types/authTypes';
@@ -127,15 +127,25 @@ export default function Login(props) {
 
     }, [register, loginResponse, loginError, user, token])
 
-    const responseGoogleSuccess = (r) => {
-        console.log(r);
-        dispatch(loginSSO({
+    async function responseGoogleSuccess (r){
+        setLoggingIn(true)
+        const response = await loginSSO({
             provider : "GOOGLE",
             uid: r.googleId,
             email : r.profileObj.email,
             name : r.profileObj.name,
+            organization : r.profileObj.name + " User Group",
             token : r.tokenId
-        }));
+        });
+        if (isError(response)) {
+            console.log(response)
+            setLoggingIn(false)
+            dispatch({type: LOGIN_ERROR, payload: response});
+        }else {
+            setLoggingIn(false)
+            dispatch({type: LOGIN_RESPONSE, payload: response});
+            setLoginResponse(response);
+        }
       }
     
       const responseGoogleError = (response) => {

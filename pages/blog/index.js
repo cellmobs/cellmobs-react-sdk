@@ -71,8 +71,12 @@ export default function Blog(props) {
         <Header />
         <Navbar title="Cellmobs" logo="lite" text="dark" />
         <div data-overlay className="bg-primary-3 jarallax text-white" data-jarallax-off data-speed="0.2" style={{ 'paddingTop': '80px' }} >
+          {page.primaryContent? 
           <img src={`${CDN_BASE_URL}${page.primaryContent?.masterPath}`} alt="" className="jarallax-img opacity-60 section-image"  />
-          <section className="pb-0">
+          :           
+          <img src="https://cdn.cellmobs.com/cellmobs-dev/master_pkbakqlg57-website.jpeg" alt="" className="jarallax-img opacity-60 section-image"  />
+          }
+        <section className="pb-0">
             <div className="container min-vh-30 pb-5">
               <div className="row justify-content-center text-center">
                 <div className="col-xl-8 col-lg-10 col-md-11">
